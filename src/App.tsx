@@ -1,11 +1,10 @@
-import { act, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { data, IData } from "./data";
 import Answer from "./answer";
 
 function App() {
 	const [answer, setAnswer] = useState<IData[]>([]);
 	const [activeIndex, setActiveIndex] = useState(0);
-  const [success, setSuccess] = useState(false)
 
 	useEffect(() => {
 		document.title = "Загадки";
@@ -13,11 +12,11 @@ function App() {
 		setAnswer(data);
 	}, []);
 
-  useEffect(() => {
-    if(activeIndex > 3 ) {
-      setSuccess(true)
-    }
-  }, [activeIndex])
+  // useEffect(() => {
+  //   if(activeIndex > 3 ) {
+  //     setSuccess(true)
+  //   }
+  // }, [activeIndex])
 
 	return (
 		<div className="wrapper">

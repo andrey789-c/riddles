@@ -12,12 +12,6 @@ function App() {
 		setAnswer(data);
 	}, []);
 
-  // useEffect(() => {
-  //   if(activeIndex > 3 ) {
-  //     setSuccess(true)
-  //   }
-  // }, [activeIndex])
-
 	return (
 		<div className="wrapper">
 			{!activeIndex ? (
